@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.io.IOException;
+import java.time.Clock;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -37,9 +38,11 @@ public class ESController {
         String type = "user";//type名，如果不存在自动创建
 //        String id = "1";//记录id，如果本来就存在，则视为更新操作，覆盖原来的记录
 
+        Clock clock =Clock.systemUTC();
+        System.out.println(String.format("%s",clock.instant()));
         JSONObject data = new JSONObject();
         data.element("user", name);
-        data.element("post_date", "2018-02-02 16:22:37");
+        data.element("post_date",String.format("%s",clock.instant()));
         data.element("message", message);
 
         String url = ESConfig.URL + "/" + index + "/" + type + "/" + id;
