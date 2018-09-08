@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 /**
- * @author liqihua
+ * @author
  * @since 2018/5/7
  */
 @Configuration
@@ -23,8 +23,8 @@ public class ESConfig {
     /**
      * springboot注入配置
      */
-    @Bean
-    public RestHighLevelClient ESClient(){
-        return new RestHighLevelClient(RestClient.builder(new HttpHost(ESConfig.IP, ESConfig.PORT, "http")));
-    }
+//    @Bean
+//    public RestHighLevelClient ESClient(){
+//        return new RestHighLevelClient(RestClient.builder(new HttpHost(ESConfig.IP, ESConfig.PORT, "http")));
+//    }
 }

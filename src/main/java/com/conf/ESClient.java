@@ -7,7 +7,7 @@ import org.elasticsearch.client.RestHighLevelClient;
 import java.io.IOException;
 
 /**
- * @author 
+ * @author
  * @since 2018/5/8
  * 官方client的使用
  */

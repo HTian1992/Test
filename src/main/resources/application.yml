@@ -3,13 +3,19 @@ server:
 spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
-    url: jdbc:mysql://127.0.0.1:3306/web?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&useSSL=false&nullNamePatternMatchesAll=true
+    url: jdbc:mysql://120.78.82.33:3306/web?serverTimezone=UTC&useUnicode=true&characterEncoding=utf-8&useSSL=false&nullNamePatternMatchesAll=true
     username: root
-    password: 111
+    password: 111111
     driver-class-name: com.mysql.cj.jdbc.Driver
     filters: stat,wall,log4j
 mybatis:
   mapper-locations: classpath*:com/dao/mapperxml/*.xml
   config-location: classpath:mybatis-config.xml
   type-aliases-package: com.dao.entity
+lzh:
+  conf:
+    es:
+      ip: 127.0.0.1
+      port: 9200
+
   
