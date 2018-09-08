@@ -14,7 +14,7 @@ import java.util.List;
  *  @author htian
 * */
 @RestController
-public class TestControoler {
+public class TestController {
 	
 	@Autowired
 	private MscUserMapper mscUserMapper;
